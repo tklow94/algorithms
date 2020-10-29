@@ -9,7 +9,7 @@
         //after the first parent, notice we are leap frogging skipping 1 and grabbing the next two
             //if you have a parent, its children are at 2n+1 and 2n+2 for the left and right child respectively
     //If you have a child and want the parent we need to do..
-        //n-1/2 and n -2 /2 to find the left and right respectively.
+        //n-1/2 
             //have to floor 
 
 

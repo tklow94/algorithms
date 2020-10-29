@@ -75,9 +75,9 @@
                 }
                 if(swap === null) break;//This means its in the right place and never swapped
                 //Swap is left or right index
-                this.values[index] = this.values[swap]
-                this.values[swap] = element 
-                index = swap 
+                this.values[index] = this.values[swap]//make largest boy the new parent
+                this.values[swap] = element //assign value of where large guy used to be to our min 
+                index = swap //set index to new parent index and check children from there
             }
         }
     }
