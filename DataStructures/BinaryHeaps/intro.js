@@ -7,3 +7,8 @@
 
 //Binary Heaps are useful for priority queue data structures (MORE TO COME!)
 //Also used a lot with graph traversal algorithms(more to come!)
+
+
+//BIG O!!!!
+    //Min and max heaps are great for insertion and deleted O(log N) for both
+    //Search is O(n) because there is no specific order in this tree between siblings you must traverse all paths.
