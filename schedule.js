@@ -1,26 +1,26 @@
-
-
-
-
-
-
-
-
-
-    //SLL, all sliding windows, binary heaps rev
+//Tues
+    //Resume and LinkedIn Update
+    //Readmes and demos for Two apps
+    //Medium Article 
+//Thurs
+    //4 sort algos
+    //CS basics
         //Lunch
-    //Ruby Event Boss finish
+    //Work on Project Includes starting to use redux
+   
 
+//Fri
+    //Work on Project Til Lunch
+        //Lunch
+    //3 Sort Algos
+    //Tehcnical Interview 5:00pm
 
-
-
-
-//SAT
-    //DLL 
-    //Make Readme and demo for Ruby app
-    //Recursion All
+//Sat
+    //Hash Tables 1/2
 //Sun 
-    //Determine what project want to do for fullStack
+    //Hash Tables 1/2
+
+
     
     
 
