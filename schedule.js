@@ -3,7 +3,6 @@
     //Readmes and demos for Two apps
     //Medium Article 
 //Thurs
-    //4 sort algos
     //CS basics
         //Lunch
     //Work on Project Includes starting to use redux
