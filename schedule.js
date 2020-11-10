@@ -1,26 +1,25 @@
-//Tues
-    //Resume and LinkedIn Update
-    //Readmes and demos for Two apps
-    //Medium Article 
-//Thurs
-    //CS basics
-        //Lunch
-    //Work on Project Includes starting to use redux
-   
+//Today
+    //Infosys Interview Study Guide
+    //1 new sort
+    //medium article
+    //Interview 3:30
+    //Redux Finish + Ecommerce start
+    //Leet code 
 
-//Fri
-    //Work on Project Til Lunch
-        //Lunch
-    //3 Sort Algos
-    //Tehcnical Interview 5:00pm
+//Tomorrow
+    //Interview Review
+    //10:30 infosys review
+    //Redux Selectors
+    //Ecommerce Continue
+    //1 new sort/ rev merge sort
+    //leet code
 
-//Sat
-    //Hash Tables 1/2
-//Sun 
-    //Hash Tables 1/2
 
+
+
+
+
+  
+  
 
     
-    
-
-
