@@ -1,47 +1,40 @@
-//radix Sort
-    //faster than quick and merge sort because of the way it does comparisoins, but it only works for a list of numbers. It makes n number of comparisons with n being then number of digits in the largest number...
-    //Helper functions sort the numbers into buckets n times, into base m number of buckets (if m is base ten, then we sort into 10 buckest 0-9)
-        //Start with the right most number and put into buckets 0-9. If there is no number put into 0. This is how the numbers get sorted.
+//like merge sort, quick sort relies on the fact that arrays are already sorted for 1 and 0 length. Overarching theme of this sort method is that we declare a value to be a pivot point. Determine where the pivot point should be, and move all values lower than it to the left and all values higher than it to the right. Repeat the process recursively on the left and right side.
 
-//First need a helper getDigit, which takes in a num and a position and returns the value at that opposite position in the num.
-//input 102,0 => 2
+//Pivot Helper takes in an array and a start and end index. Returns the index in which the pivot needs to be swapped with. Basically create a for loop to swap values to move smaller ones to the left and larger ones to the right. If pivot value is greater than that i value, we will swap it with our swapIdx and i.
+//Out of the loop we can swap the pivot to its rightful spot.
 
-function getDigit(num,pos){
-    return Math.floor(Math.abs(num)/Math.pow(10,pos)) %10
-}
-//Math.pow(exponent, base) gives base^exp. 
-    //Divide abs value by its base ten placeholder value
-//modulo 10 gives us the remainder after dividing.
-//dividing module by ten always gives us the value of the ones place. 
-
-
-
-//Still need to find digitCount of all numbers, and then a function to determine which one of those has the most digits.
-
-
-
-//Easiest way is to use the Math.log10(num) which returns the exponent of 10^x to become the num given. 10 would be 1, 100 be 2, etc. Therefore the find how many digits there are we need to +1. Remeber log of 0 or less is NaN, so we need to add a conditional to handle just the 0, the NaN for negative numbers can be handles with a Math.abs().
-function digitCount(num){
-    if(num === 0) return 1
-    return Math.floor(Math.log10(Math.abs(num))) +1
-}
+//Best is O(nlogn) worst is O(n^2)
+    //decomposition is log(n) to get to 1 element array (best case)
+        //Each decomposition we make O(n) comparisons
+    //If our data is already sorted and we picked the first element in the array as the pivot, each decomposition is only 1 item pivoting on so the decomposition becomes O(n). And overall time is O(n^2) time.
+    //Best to pick a median value if possible.
 
 
 
 
-//Now lets find out which number has the most digits!
-
-
-
-function mostDigits(arr){
-    let maxDigits = 0;
-    for(let i = 0; i<arr.length; i++){
-        maxDigits = Math.max(maxDigits, digitCount(arr[i]))
+function pivot(arr, start = 0, end = arr.length -1){
+    function swap(arr,i,j){
+        [arr[i],arr[j]] = [arr[j],arr[i]]
+      }
+    let pivot = arr[start];
+    let swapIdx = start;
+    for(let i = start + 1; i<=end; i++){
+        if(pivot > arr[i]){
+            swapIdx++;
+            swap(arr,swapIdx, i)
+        }
     }
-    return maxDigits
+    swap(arr, start, swapIdx)
+    return swapIdx
 }
 
+//Assign recusive breakpoint when subarray is 1, when left and right are equal.
 
-console.log(mostDigits([1,10,100]))
-
-
+function quickSort(arr, left = 0, right = arr.length-1){
+    if(left < right){
+        let pivotIndex = pivot(arr, left, right);
+        quickSort(arr, left, pivotIndex -1);
+        quickSort(arr, pivotIndex +1, right);
+    }
+    return arr
+}

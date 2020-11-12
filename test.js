@@ -42,6 +42,28 @@ function mostDigits(arr){
 }
 
 
-console.log(mostDigits([1,10,100]))
+
+
+function radixSort(arr){
+    let maxDigitCount = mostDigits(arr);
+    for(let i = 0; i<maxDigitCount; i++){
+        let digitBuckets = Array.from({length: 10}, () => [])
+        //two arguments, length of the array as an object, and the second a function that return empty arrays.
+        for(let j = 0; j<arr.length; j++){
+            let digit = getDigit(arr[j],i)
+            digitBuckets[digit].push(arr[j])
+        }
+        arr = [].concat(...digitBuckets)
+    }
+    return arr
+}
+console.log(radixSort([10,1,100]))
+
+//Now lets implement them all together
+//accepts an array of numbers
+//find out how many loops are in a single number (number of digits)
+//Create buckets for each digit and place each number in the corresponding bucket with forEach loop x2. One loop for making the buckets and another for placing the numbers.
+//Replace our existing array with the bucket values 
+//return list
 
 
