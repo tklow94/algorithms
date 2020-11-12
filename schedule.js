@@ -1,13 +1,11 @@
 //Today
-    //1 new sort
-    //Redux Selectors
-    //Prep for startUp interview
-
-
-//Tomorrow
-    //Redux E-commerce Start
+    //Redux E-commerce 
+    //Fix Project description plus video plus resume
+    //1 outreach attempt
     //1 new sort 1 old sort
-    //leet code
+    //Talk with Jim Lau
+
+
 
    
 
