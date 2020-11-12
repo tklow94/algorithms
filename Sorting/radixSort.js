@@ -53,7 +53,7 @@ function radixSort(arr){
             let digit = getDigit(arr[j],i)
             digitBuckets[digit].push(arr[j])
         }
-        arr = [].concat(...digitBuckets)
+        arr = [].concat(...digitBuckets)//collect them each time because it then takes that new semi sroted array and continues the loop with it. Also need the spread operator because it allows us to put each array as an argument so that the values get assigned into a new array instead of creating a nested array.
     }
     return arr
 }
