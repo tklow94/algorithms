@@ -8,6 +8,9 @@
 //Output: ["h","a","n","n","a","H"]
 
 
+//Does in place mean constant space?
+
+
 function swap(arr, i, j){
     [arr[i],arr[j]] = [arr[j],arr[i]]
 }
@@ -30,3 +33,8 @@ function reverseString(arr){
 }
 
 console.log(reverseString(["H","a","n","n","a","h"]))
+
+
+//Multiple pointers store extra memory allocaiton for extra pointer
+//Time O(n)
+//Space O(1)
