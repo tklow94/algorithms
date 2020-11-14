@@ -27,17 +27,23 @@
         //This works, but is not what the code wanted it doesn't want it as an array but as a root
 
 
-//I think it wants an actual tree structure, it wants the number of children nodes.
+//the +1 is for the parent level
 
 function maxDepth(root){
     if(root === null) return 0;
-    let left = maxDepth(root.left) + 1;
-    let right = maxDepth(root.right) + 1;
+    let left = maxDepth(root.left) + 1; 
+    let right = maxDepth(root.right) + 1; 
     return Math.max(left, right)
 }
 
 console.log(maxDepth([3,9,20,null,null,15,7]))
 
+//left + 1
+//right 
+//call stack
+  
+
+   
 
 
         
