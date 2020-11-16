@@ -39,7 +39,26 @@ function maxDepth(root){
 
 console.log(maxDepth([3,9,20,null,null,15,7]))
 
+//tail recursion optimizes in languages that do so with recursion. Meaning it is better to put the recursive return at the end.
+//In standard recursion, the entire stack must be completed before a result is given, In tail recursion, you perform the calculation first then the recursive call passing the results from one call to another. The advantage is not needing the stack to execute the final result. It is akin to having separate independant maxDepths being called independently from one another than relying on a stack to finish to execute.
 
+//Regular stack
+recsum(5)
+5 + recsum(4)
+5 + (4 + recsum(3))
+5 + (4 + (3 + recsum(2)))
+5 + (4 + (3 + (2 + recsum(1))))
+5 + (4 + (3 + (2 + 1)))
+15
+
+//Tail end recursion
+tailrecsum(5, 0)
+tailrecsum(4, 5)
+tailrecsum(3, 9)
+tailrecsum(2, 12)
+tailrecsum(1, 14)
+tailrecsum(0, 15)
+15
 
 
 
