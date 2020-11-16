@@ -28,3 +28,5 @@ console.log(singleNumber([4,1,2,1,2]))
 
 //for(key in object) is for looping over keys.
 
+//bit manipulation is constant time complexity. Bit manipulation is working on datatypes that are small, consisting of just a few bytes like an integer. You would compare the bytes which is why the space would be constant. Don't need to know too much about this. Just know it exists.
+
