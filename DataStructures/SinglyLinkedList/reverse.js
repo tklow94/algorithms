@@ -111,7 +111,7 @@
             this.length--;
             return removal
         }
-        reverse(){
+        reverseList(){
             let node = this.head;
             this.head = this.tail;
             this.tail = node;
