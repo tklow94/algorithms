@@ -3,8 +3,11 @@
     //"hello" => 12
     //"Trevor is the best" => 13
 
+    
 //a good hash function is fast, constant time O(1)
-//Distributes keys uniformly, meaning random assignment amd/or evenly spread.
+
+//Distributes keys uniformly, meaning random assignment amd/or evenly spread. Doesn't return the same output for different inputs.
+
 //Same input results in the same output everytime. It is deterministic.
 
 
