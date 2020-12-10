@@ -64,3 +64,6 @@
 // % acts the same way as in JS. ++ -- += -= *= /= al the same in Java.
 
 // if statement in java, ; is not put at the end of the conditional. Remeber semicolon closes off a line of code and completes it. Without a code block, only one line of code can be executed, and it will be the first.
+    //Ternary is the same as well.
+
+//Java operators have precedence, priority order like in math. Google if need to.
