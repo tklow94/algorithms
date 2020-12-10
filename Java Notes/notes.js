@@ -44,7 +44,7 @@
 
             //Float and double should not be used for currency calculations.
 
-            //Char and boolean are the last two primitive types, boolean give T/F and Char is put in single quotes, it can only store a single character and is not a string, it is a charcter literal. Useful for storing the last keypress or something like in a game.
+            //Char and boolean are the last two primitive types, boolean give T/F and Char is put in single quotes, it can only store a single character and is not a string, it is a charcter literal. Useful for storing the last keypress or something like in a game. Char is not a single byte. It is 2 bytes or 16 bits. This is because it can represent unicode which is two bytes.
 
 
 
@@ -56,3 +56,11 @@
 
 
 //Java Package: Organizes Java projects, like folders. com.company com folder => company folder
+
+
+//String is a class in Java and not a primitive data type. String can contain single character all the way to large sequences. Use + to concat. When you add a string to an integer, it will concat like a string.
+    //Strings are immutable, meaning, when reassigning, it will create an entirely new string and the old one discarded.
+
+// % acts the same way as in JS. ++ -- += -= *= /= al the same in Java.
+
+// if statement in java, ; is not put at the end of the conditional. Remeber semicolon closes off a line of code and completes it. Without a code block, only one line of code can be executed, and it will be the first.
