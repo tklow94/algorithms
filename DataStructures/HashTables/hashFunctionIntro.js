@@ -55,3 +55,25 @@ function Hash2(key, arrayLen){
 
 
 
+
+
+//now we need to handle collission or... what happens when we put in two strings and we get the same array index number to increase distribution randomness.
+
+//Two strategies:
+    //Separate Chaining: Store data at the same spot using another nested data strucutre. This allows multiple key/value pairs at the same index. (Could use another array or a linked list). Works for a limited column table.
+    //Linear Probing: When collission, look forward for the next empty slot, prevents data being stored nested and at the same index. Limited by the number of collumns in our hash table.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
