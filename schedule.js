@@ -12,7 +12,6 @@
 //Today:
     // Internships (3)
     // leetcode
-    // algo
     // ruby
     // Lunch
     // roblox
