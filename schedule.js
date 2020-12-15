@@ -1,7 +1,7 @@
 //Ruby  8 hrs/week (2) 116min
 //React 10 hrs/week (2)
 //Java 8hrs/week (2)
-//leet code 1 & 1/2 lesson Alternate between leet and hackerrank.
+//leet code 1 & 1/2 lesson 
 //Medium Article (1/week)
 
 
@@ -12,8 +12,6 @@
 
 //Today:
     //ruby time
-    //hacker rank
-        //medium
     //ruby time (hopefully finish if not saturday baby)
 
 
