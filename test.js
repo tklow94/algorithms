@@ -1,20 +1,103 @@
-function countFrom(string,end){
-    let total = 0;
-  for(let i = 0; i < end; i++) {
-    if(string[i] === "a") total++
+class Node {
+    constructor(val) {
+        this.val = val;
+        this.next = null;
+    }
+}
+
+class SLL {
+    constructor(){
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    push(val) {
+        let node = new Node(val);
+        if(!this.head){
+            this.head = node;
+            this.tail = this.head
+        }else {
+            this.tail.next = node;
+            this.tail = node;
+        }
+        this.length++;
+        return this
+        }
     
-  }
-  return total;
+    pop() {
+        if(!this.head){
+            return undefined;
+        }
+        let current = this.head;
+        let newTail = current;
+        while(current.next){
+            newTail = current; //newTail
+            current = current.next; //removed tails
+        }
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        if(this.length == 0){
+            this.head = null;
+            this.tail = null;
+        }
+        return current
+    }
+    shift() {
+        if(!this.head){
+            return undefined;
+        }
+       let newHead = this.head.next;
+       let removed = this.head;
+        this.head = newHead;
+        this.length--;
+        if(this.length == 0){
+            this.head = null;
+            this.tail = null;
+        }
+        return removed;
+    }
+    unShift(val) {
+        let node = new Node(val);
+        if(!this.head){
+            this.head = node;
+            this.tail = this.head;
+        }else{
+            let next = this.head;
+            this.head = node;
+            this.head.next = next;
+        }
+        this.length++;
+        return this
+    }
+    get(index){
+        if(this.length < index || index >= this.length){
+            return undefined;
+        }else {
+            let i = 0;
+            let target = this.head;
+           while(i != index){
+                target = target.next;
+               i++;
+           }
+           return target;
+        }
+    }
+    set(index, val) {
+       let node = this.get(index);
+       if(node) {
+           node.val = val;
+           return node;
+       }
+       return false;
+    }
+    insert() {
+    
+    }
 }
 
-function repeatedString(s,n){
-    let count = countFrom(s,s.length);
-    let repeat = Math.floor(n/s.length)
-    let remainder = n % s.length
-    let numRem = countFrom(s,remainder)
-  
-   console.log([count,repeat,numRem])
-    return count*repeat + numRem
-}
+let list = new SLL();
+list.push(5);
+list.push(4);
+list.push(3);
 
-console.log(repeatedString('aba',10))//return 7 aba aba aba a
