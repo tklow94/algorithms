@@ -1,33 +1,20 @@
-//jump on anyt cloud +1 or +2
-//only clouds labelded 1 are bad, 0 are good
-//alays possible to win
-//return minimum number of jumps
-
-
-function clouds(ar) {
-    let i = 0;
-    let j = 1
-    let jumps = 0;
-    while(j<ar.length){
-        if(ar[j] != 0){
-            i += 2;
-            j += 2;
-            jumps++;
-        }else {
-           if(ar[j+1]==0){
-            i += 2;
-            j += 2;
-            jumps++;
-           }else {
-               i++;
-               j++;
-               jumps++
-           }
-        }
-    }
-    return jumps
-
+function countFrom(string,end){
+    let total = 0;
+  for(let i = 0; i < end; i++) {
+    if(string[i] === "a") total++
+    
+  }
+  return total;
 }
 
-console.log(clouds([0,1,0,0,0,1,0])) //should be 3 jumps
-                            
+function repeatedString(s,n){
+    let count = countFrom(s,s.length);
+    let repeat = Math.floor(n/s.length)
+    let remainder = n % s.length
+    let numRem = countFrom(s,remainder)
+  
+   console.log([count,repeat,numRem])
+    return count*repeat + numRem
+}
+
+console.log(repeatedString('aba',10))//return 7 aba aba aba a
