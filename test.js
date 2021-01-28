@@ -91,8 +91,22 @@ class SLL {
        }
        return false;
     }
-    insert() {
-    
+    insert(index, val) {
+        if(index < 0 || index > this.length){
+            return false;
+        }
+        if(index == 0) return !!this.unShift(val);
+        if(index == this.length) return !!this.push(val);
+        let node = new Node(val);
+        let prev = this.get(index -1);
+        let temp = prev.next;
+        prev.next = node;
+        node.next = temp;
+        return this
+        
+       
+
+
     }
 }
 
@@ -100,4 +114,6 @@ let list = new SLL();
 list.push(5);
 list.push(4);
 list.push(3);
+list.insert(1,5);
+console.log(list);
 
