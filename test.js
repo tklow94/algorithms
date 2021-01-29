@@ -103,10 +103,19 @@ class SLL {
         prev.next = node;
         node.next = temp;
         return this
-        
-       
-
-
+    }
+    remove(index) {
+        if(index < 0 || index > this.length){
+            return false;
+        }
+        if(index == 0 )return !!this.shift(index);
+        if(index == this.length) return !!this.pop(index);
+        let prev = this.get(index -1);
+        let remove = prev.next;
+        let next = remove.next;
+        remove.val = null;
+        prev.next = next;
+        return this
     }
 }
 
@@ -114,6 +123,6 @@ let list = new SLL();
 list.push(5);
 list.push(4);
 list.push(3);
-list.insert(1,5);
+list.remove(1);
 console.log(list);
 
