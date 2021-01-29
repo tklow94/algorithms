@@ -102,6 +102,7 @@ class SLL {
         let temp = prev.next;
         prev.next = node;
         node.next = temp;
+        this.length++
         return this
     }
     remove(index) {
@@ -113,16 +114,41 @@ class SLL {
         let prev = this.get(index -1);
         let remove = prev.next;
         let next = remove.next;
-        remove.val = null;
         prev.next = next;
+        this.length--;
         return this
     }
+    reverse(){
+        let node = this.head;
+
+        this.head = this.tail;
+        this.tail = node;
+
+        let prev = null;
+        let next = null;
+
+        while(node){
+           
+            next = node.next;
+            node.next = prev;
+
+            prev = node;
+            node = next;
+        }
+        return this;
+    
+}
 }
 
 let list = new SLL();
 list.push(5);
 list.push(4);
 list.push(3);
-list.remove(1);
-console.log(list);
+list.push(2);
+console.log(list.reverse())
+
+
+
+
+
 
