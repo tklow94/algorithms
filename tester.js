@@ -27,23 +27,28 @@ class DLL {
        
     }
     pop(){
-        if(!this.head)return undefined;
-        let currentTail = this.tail;
-        if(this.length === 1){
-            this.head = null;
-            this.tail= null;
+        if(!this.head){
+            return null;
         }
-        this.tail = currentTail.prev
-        this.tail.next = null
+        if(this.length == 1){
+            this.head = null;
+            this.tail = null;
+        }else{
+            let newTail = this.tail.prev;
+            newTail.next = null;
+            this.tail = newTail;
+        }
         this.length--;
-        return currentTail
+        return this;
     }
+
 }
 
 let dll = new DLL();
 dll.push(5);
 dll.push(4);
-
+dll.push(3);
+dll.pop();
 
 console.log(dll);
 
