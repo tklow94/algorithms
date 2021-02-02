@@ -42,16 +42,18 @@ class DLL {
         return this;
     }
     unshift(val){
-        let newNode =new Node(val);
-        if(!this.head === 0){
-            this.head = newNode;
-            this.tail = newNode;
-        }
-        this.head.prev = newNode;
-        newNode.next = this.head;
-        this.head = newNode;
-        this.length++
-        return list
+      let node = new Node(val);
+      if(!this.head){
+          this.head = node;
+          this.tail = node;
+      }else{
+          let current = this.head;
+          current.prev = node;
+          node.next = current;
+          this.head = node;
+      }
+      this.length++;
+      return this;
     }
 
 }
@@ -60,7 +62,7 @@ let dll = new DLL();
 dll.push(5);
 dll.push(4);
 dll.push(3);
-dll.pop();
+dll.unshift(6);
 
 console.log(dll);
 
