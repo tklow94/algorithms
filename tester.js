@@ -55,6 +55,21 @@ class DLL {
       this.length++;
       return this;
     }
+    shift(){
+        if(!this.head){
+            return null;
+        }
+        if(this.length == 1){
+            this.head = null;
+            this.tail = null;
+        }else{
+            let current = this.head;
+            this.head = current.next;
+            this.head.prev = null;
+        }
+        this.length--;
+        return this;
+    }
 
 }
 
@@ -62,7 +77,7 @@ let dll = new DLL();
 dll.push(5);
 dll.push(4);
 dll.push(3);
-dll.unshift(6);
+dll.shift();
 
 console.log(dll);
 
